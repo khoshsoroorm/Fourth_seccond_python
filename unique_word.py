@@ -1,11 +1,24 @@
-def unique_keywords(text):
+# def unique_keywords(text, ):
+#     """
+#
+#     :param text:
+#     :return: list of unique words
+#     """
+#     lst_words = text.split()
+#     return list(set(lst_words))
+
+
+def unique_keywords(text:str, ignore_case=False):
     """
 
     :param text:
-    :return: list of unique words
+    :return: list of unique words with lower case
     """
+    if ignore_case == True:
+        text = text.lower()
     lst_words = text.split()
+
     return list(set(lst_words))
 
 
-print(unique_keywords('hello and lalaal hello hello'))
+print(unique_keywords('Hello AnD aNd lalaal hello hello', True))
