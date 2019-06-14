@@ -14,11 +14,11 @@ def unique_keywords(text:str, ignore_case=False):
     :param text:
     :return: list of unique words with lower case
     """
-    if ignore_case == True:
+    if ignore_case:
         text = text.lower()
     lst_words = text.split()
-
     return list(set(lst_words))
 
 
-print(unique_keywords('Hello AnD aNd lalaal hello hello', True))
+text = 'Hello AnD aNd lalaal hello hello'
+print(unique_keywords(text, True))
